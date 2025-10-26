@@ -6,21 +6,25 @@ const stats = [
         title: "Total Sales", icon: ShoppingBag, 
         value: dashboardStats.totalSales , percent: '+12.03',
         bg: 'bg-indigo-100',
+        iconbg: 'bg-amber-900',
     },
     { 
         title: "Revenue", icon: LucideDollarSign, 
         value: `$${dashboardStats.totalRevenue}`, 
         percent: '+20.90',
+        iconbg: 'bg-amber-900',
     },
     { 
         title: "Customers", icon: User, 
         value: dashboardStats.totalCustomers, percent: '+15.03',
-        bg: 'bg-purple-100'
+        bg: 'bg-purple-100',
+        iconbg: 'bg-amber-900',
     },
     { 
         title: "Orders", icon: ShoppingCart, 
         value: dashboardStats.totalOrders, percent: '+30.59',
-        bg: 'bg-cyan-100'
+        bg: 'bg-cyan-100',
+        iconbg: 'bg-amber-900',
     },
   ];
 
@@ -36,7 +40,7 @@ const stats = [
             <div
             className={`p-3 rounded-md ${item.bg || 'bg-gray-100'}`}
             >
-            <Icon className="w-6 h-6 text-gray-700" />
+            <Icon className="w-6 h-6 "/>
             </div>
             <div className="ml-4">
             <p className="text-sm text-gray-500">{item.title}</p>
