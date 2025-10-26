@@ -11,7 +11,7 @@ export default function RecentOrders() {
             </div>
 
             {products.map((product, i) => (
-                <div className="flex items-center justify-between my-4">
+                <div key={i} className="flex items-center justify-between my-4">
                     <div className="flex w-70 items-center gap-x-2">
                         <img src={product.image} alt="" className="w-10 h-10" />
                         <div>

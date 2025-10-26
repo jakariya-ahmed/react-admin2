@@ -1,5 +1,6 @@
-import { div } from "framer-motion/client";
 
+import { TopCusts } from "../../data/dashboardData";
+import { ArrowRight, BadgeCheck } from "lucide-react";
 
 export default function TopCustomers() {
     return (
@@ -9,19 +10,18 @@ export default function TopCustomers() {
                 <button className="flex items-center text-gray-400 gap-x-2 text-semibold text-sm cursor-pointer">View All <ArrowRight className="w-4 " /> </button>
             </div>
 
-            {products.map((product, i) => (
-                <div className="flex items-center justify-between my-4">
-                    <div className="flex w-70 items-center gap-x-2">
-                        <img src={product.image} alt="" className="w-10 h-10" />
+            {TopCusts.map((cust, i) => (
+                <div key={i} className="flex items-center justify-between my-4">
+                    <div className="flex items-center gap-x-2">
+                        <img src={cust.image} alt="" className="w-10 h-10 rounded-full" />
                         <div>
-                            <h2 className="font-semibold text-gray-700">{product.name} </h2>
-                            <p className="text-sm text-gray-400">{product.cat}</p>
+                            <h2 className="font-semibold text-gray-700">{cust.name} </h2>
+                            <p className="text-sm text-gray-400 flex">{cust.purchases} Purchases <BadgeCheck  className="w-3 ml-1 text-green-500"/>  </p>
                         </div>
                     </div>
                     
-                    <div className="space-x-4 w-30 flex justify-between">
-                        <span className="text-sm text-blue-900 font-bold">{product.price}tk</span>
-                        <button><Eye className="w-5 h-5 text-indigo-400 cursor-pointer"/></button>
+                    <div className="">
+                        <span className="text-sm text-gray-700">{cust.price}tk</span>
                     </div>
                 </div>
             ))}

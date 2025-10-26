@@ -5,6 +5,8 @@ import CategoryPieChart from "../component/dashboard/CategoryPieChart";
 import TopProducts from "../component/dashboard/TopProducts";
 import RecentOrders from "../component/dashboard/RecentOrders";
 import TopCustomers from "../component/dashboard/TopCustomers";
+import OrdersTab from "../component/dashboard/Order";
+import ProductOverview from "../component/dashboard/Product";
 export default function Dashboard() { 
     return (
         <div>
@@ -21,10 +23,11 @@ export default function Dashboard() {
                 <div className="space-y-6">
                     <SalesTrendChart />
                     <CategoryPieChart />
+                    <OrdersTab />
                 </div>
             
             </div>
-
+<ProductOverview /> 
         </div>
 
     );

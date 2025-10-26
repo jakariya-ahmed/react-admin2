@@ -1,4 +1,5 @@
 import { image } from "framer-motion/client";
+import { getRandomDate } from "../utils/generateRandomDate";
 
 export const dashboardStats = {
   totalSales: 12450,
@@ -57,6 +58,21 @@ export const topSellingProducts = [
     sales: 550,
     image: "/img/tp-6.png",
   },
+    {
+    name: "Orange smart watch with square dial",
+    sales: 680,
+    image: "/img/tp-4.png",
+  },
+  {
+    name: "White shirt for man",
+    sales: 450,
+    image: "/img/tp-5.png",
+  },
+    {
+    name: "Leather jacket for men",
+    sales: 750,
+    image: "/img/tp-1.png",
+  },
 ];
 
 
@@ -67,7 +83,8 @@ export const products = [
     name: "Ethnic School bag for children",
     price: 1200,
     image: "/img/tp.png",
-    stock: 'In Stock'
+    stock: 'In Stock',
+    date: getRandomDate(),
   },
   {
     id: 2,
@@ -75,7 +92,8 @@ export const products = [
     name: "Childrens Teddy toy of high quality",
     price: 950,
     image: "/img/tp-1.png",
-    stock: 'In Stock'
+    stock: 'Stock Out',
+    date: getRandomDate(),
   },
   {
     id: 3,
@@ -83,7 +101,8 @@ export const products = [
     name: "Orange smart watch with square dial",
     price: 1300,
     image: "/img/tp-2.png",
-    stock: 'In Stock'
+    stock: 'In Stock',
+    date: getRandomDate(),
   },
   {
     id: 4,
@@ -91,7 +110,8 @@ export const products = [
     name: "Leather jacket for men",
     price: 1200,
     image: "/img/tp-3.png",
-    stock: 'In Stock'
+    stock: 'In Stock',
+    date: getRandomDate(),
   },
   {
     id: 5,
@@ -99,7 +119,8 @@ export const products = [
     name: "White shirt for man",
     price: 1200,
     image: "/img/tp-4.png",
-    stock: 'In Stock'
+    stock: 'Stock Out',
+    date: getRandomDate(),
   },
   {
     id: 6,
@@ -107,7 +128,8 @@ export const products = [
     name: "Ethnic School bag for children",
     price: 1200,
     image: "/img/tp-5.png",
-    stock: 'In Stock'
+    stock: 'In Stock',
+    date: getRandomDate(),
   },
   {
     id: 7,
@@ -115,7 +137,8 @@ export const products = [
     name: "Dslr Camera",
     price: 1200,
     image: "/img/tp-2.png",
-    stock: 'In Stock'
+    stock: 'In Stock',
+    date: getRandomDate(),
   },
 ]
 
@@ -128,45 +151,52 @@ export const TopCusts = [
     price: 24078
   }, 
   {
-    id: 1,
+    id: 2,
     name: 'John Smith',
-    image: '/img/customers/cust-1.jpg',
+    image: '/img/customers/cust-1.jpeg',
     purchases: 143,
-    price: 24078
+    price: 9805
   }, 
   {
-    id: 1,
+    id: 3,
     name: 'Michel Rasel',
     image: '/img/customers/cust-2.jpg',
     purchases: 143,
-    price: 24078
+    price: 24509
   }, 
   {
-    id: 1,
+    id: 4,
     name: 'Smith Keyosaki',
-    image: '/img/customers/cust-3.jpg',
+    image: '/img/customers/cust-3.jpeg',
     purchases: 143,
-    price: 24078
+    price: 24009
   }, 
   {
-    id: 1,
+    id: 5,
     name: 'Robert Lewis',
     image: '/img/customers/cust.jpg',
     purchases: 143,
-    price: 24078
+    price: 3459
   }, 
   {
-    id: 1,
+    id: 6,
     name: 'Emma Wilson',
-    image: '/img/customers/cust-3.jpg',
+    image: '/img/customers/cust-3.jpeg',
     purchases: 143,
-    price: 24078
+    price: 24889
   }, 
   {
-    id: 1,
+    id: 7,
     name: 'Emma Wilson',
     image: '/img/customers/cust.jpg',
     purchases: 143,
-    price: 24078
+    price: 28078
   }, 
+   {
+    id: 7,
+    name: 'Emma Wilson',
+    image: '/img/customers/cust-2.jpg',
+    purchases: 143,
+    price: 24078
+  },
 ]
