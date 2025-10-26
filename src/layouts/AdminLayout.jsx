@@ -32,11 +32,11 @@ export default function AdminDashboard() {
             isSidebarOpen={isSidebarOpen}
             toggleSidebar={toggleSidebar}
             />
-            <div>
+            <div className="flex flex-col flex-1">
                 {/* admin topbar  */}
                 <Topbar toggleSidebar={toggleSidebar} />
 
-                <main className="flex-1 overflow-y-auto p-4">
+                <main className="flex-1 overflow-y-auto p-4 bg-[#f0f1f7]">
                     <Outlet />
                 </main>
             </div>
