@@ -17,14 +17,14 @@ export default function Topbar({ toggleSidebar }) {
 
                 <div className="relative cursor-pointer">
                     <ShoppingBag className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-gray-00 text-xs rounded-full px-1">
+                    <span className="absolute -top-1 -right-1 bg-cyan-500 text-white text-xs rounded-full px-1">
                         3
                     </span>
                 </div>
 
                 <div className="relative cursor-pointer">
-                    <Bell className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-gray-00 text-xs rounded-full px-1">
+                    <Bell className="text-white-400 cursor-pointer hover:text-amber-500 w-4" />
+                    <span className="absolute -top-1 -right-1 bg-violet-500 text-white text-xs rounded-full px-1">
                         10
                     </span>
                 </div>
