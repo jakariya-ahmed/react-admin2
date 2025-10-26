@@ -3,6 +3,8 @@ import DashboardStats from "../component/dashboard/DashboardStats";
 import SalesTrendChart from "../component/dashboard/SalesTrendChart";
 import CategoryPieChart from "../component/dashboard/CategoryPieChart";
 import TopProducts from "../component/dashboard/TopProducts";
+import RecentOrders from "../component/dashboard/RecentOrders";
+import TopCustomers from "../component/dashboard/TopCustomers";
 export default function Dashboard() { 
     return (
         <div>
@@ -11,6 +13,10 @@ export default function Dashboard() {
                 <div className="space-y-6">
                     <DashboardStats /> 
                     <TopProducts />
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-4">
+                        <RecentOrders />
+                        <TopCustomers />
+                    </div>
                 </div>
                 <div className="space-y-6">
                     <SalesTrendChart />

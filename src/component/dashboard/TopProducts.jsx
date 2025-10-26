@@ -11,7 +11,7 @@ export default function TopProducts() {
         {topSellingProducts.map((product, index) => (
           <div
             key={index}
-            className="flex items-center p-2 border border-gray-100 rounded-md"
+            className="flex items-center p-2 border border-gray-100 rounded-md cursor-pointer"
           >
             <img
               src={product.image}

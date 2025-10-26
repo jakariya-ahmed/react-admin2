@@ -1,3 +1,5 @@
+import { image } from "framer-motion/client";
+
 export const dashboardStats = {
   totalSales: 12450,
   totalRevenue: 84500,
@@ -56,3 +58,115 @@ export const topSellingProducts = [
     image: "/img/tp-6.png",
   },
 ];
+
+
+export const products = [
+  {
+    id: 1,
+    cat: 'Fashion',
+    name: "Ethnic School bag for children",
+    price: 1200,
+    image: "/img/tp.png",
+    stock: 'In Stock'
+  },
+  {
+    id: 2,
+    cat: 'Toddy',
+    name: "Childrens Teddy toy of high quality",
+    price: 950,
+    image: "/img/tp-1.png",
+    stock: 'In Stock'
+  },
+  {
+    id: 3,
+    cat: 'Electronic',
+    name: "Orange smart watch with square dial",
+    price: 1300,
+    image: "/img/tp-2.png",
+    stock: 'In Stock'
+  },
+  {
+    id: 4,
+    cat: 'Fashion',
+    name: "Leather jacket for men",
+    price: 1200,
+    image: "/img/tp-3.png",
+    stock: 'In Stock'
+  },
+  {
+    id: 5,
+    cat: 'Fashion',
+    name: "White shirt for man",
+    price: 1200,
+    image: "/img/tp-4.png",
+    stock: 'In Stock'
+  },
+  {
+    id: 6,
+    cat: 'Fashion',
+    name: "Ethnic School bag for children",
+    price: 1200,
+    image: "/img/tp-5.png",
+    stock: 'In Stock'
+  },
+  {
+    id: 7,
+    cat: 'Electronic',
+    name: "Dslr Camera",
+    price: 1200,
+    image: "/img/tp-2.png",
+    stock: 'In Stock'
+  },
+]
+
+export const TopCusts = [
+  {
+    id: 1,
+    name: 'Emma Wilson',
+    image: '/img/customers/cust.jpg',
+    purchases: 143,
+    price: 24078
+  }, 
+  {
+    id: 1,
+    name: 'John Smith',
+    image: '/img/customers/cust-1.jpg',
+    purchases: 143,
+    price: 24078
+  }, 
+  {
+    id: 1,
+    name: 'Michel Rasel',
+    image: '/img/customers/cust-2.jpg',
+    purchases: 143,
+    price: 24078
+  }, 
+  {
+    id: 1,
+    name: 'Smith Keyosaki',
+    image: '/img/customers/cust-3.jpg',
+    purchases: 143,
+    price: 24078
+  }, 
+  {
+    id: 1,
+    name: 'Robert Lewis',
+    image: '/img/customers/cust.jpg',
+    purchases: 143,
+    price: 24078
+  }, 
+  {
+    id: 1,
+    name: 'Emma Wilson',
+    image: '/img/customers/cust-3.jpg',
+    purchases: 143,
+    price: 24078
+  }, 
+  {
+    id: 1,
+    name: 'Emma Wilson',
+    image: '/img/customers/cust.jpg',
+    purchases: 143,
+    price: 24078
+  }, 
+]

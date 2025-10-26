@@ -6,7 +6,7 @@ const COLORS = ["#f59e0b", "#3b82f6", "#10b981", "#8b5cf6", "#ef4444"];
 
 const CategoryPieChart = () => {
   return (
-    <div className="bg-white p-4 rounded-xl shadow">
+    <div className="bg-white p-4 rounded-md shadow">
       <h2 className="text-gray-800 font-semibold mb-4">Category Distribution</h2>
       <ResponsiveContainer width="100%" height={250}>
         <PieChart>
