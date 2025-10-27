@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminDashboard from "../layouts/AdminLayout";
 import Dashboard from "../pages/Dashboard";
+import CreateProduct from "../pages/product/CreateProduct";
 
 export default function AppRouter() {
     return (
@@ -9,6 +10,7 @@ export default function AppRouter() {
                 {/* admin routes  */}
                 <Route path="admin/" element={<AdminDashboard />}>
                     <Route index element={<Dashboard />} />
+                    <Route path="create-product" element={<CreateProduct /> } />
                 </Route>
             </Routes>
         </BrowserRouter>

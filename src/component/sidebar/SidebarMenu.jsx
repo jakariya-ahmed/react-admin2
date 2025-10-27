@@ -104,7 +104,7 @@ export default function SidebarMenu({ isCollapsed }) {
             {openParent === 'products' && !isCollapsed && (
                 <div className="ml-6 space-y-1">
                     <NavLink
-                        to="/dashboard/create-products"
+                        to="/admin/create-product"
                         className={({ isActive }) => `flex items-center gap-x-2 w-full p-2 hover:indigo-900 ${isActive ? 'bg-indigo-900' : '' }`}
                     >
                         <span className="text-sm">Add New </span> <PlusCircle className="w-3 h-3" /> 
