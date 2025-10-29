@@ -20,7 +20,7 @@ export default function SingleImageUpload() {
       </label>
 
       {/* Upload area */}
-      <div className="relative group border-2 border-dashed border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center cursor-pointer hover:border-purple-900 transition-all duration-150">
+      <div className="relative group border-2 border-dashed border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center cursor-pointer border-gray-300 bg-indigo-50 hover:bg-indigo-100 transition-all duration-150">
         <input
           type="file"
           accept="image/*"

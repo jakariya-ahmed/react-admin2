@@ -25,8 +25,27 @@ export default function GalleryUploader() {
       </label>
 
       {/* Upload Input */}
-      <label className="cursor-pointer flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-gray-300 rounded-lg hover:bg-indigo-50 transition-all">
-        <span className="text-indigo-900 font-semibold">Click to upload</span>
+      <label className="cursor-pointer flex flex-col items-center justify-center w-full h-40 border-2 border-dashed border-gray-300 rounded-lg bg-indigo-50 hover:bg-indigo-100 transition-all">
+        <div className="flex flex-col items-center text-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10 mb-2 text-purple-900"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M3 8.25l7.5 7.5L21 8.25"
+              />
+            </svg>
+            <p className="text-sm font-medium text-indigo-900">
+              Click to upload image
+            </p>
+            <p className="text-xs text-gray-400">PNG, JPG, JPEG (max 5MB)</p>
+          </div>
         <input
           type="file"
           accept="image/*"
