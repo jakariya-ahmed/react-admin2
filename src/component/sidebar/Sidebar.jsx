@@ -1,6 +1,7 @@
 import { LayoutDashboard, X } from "lucide-react";
 import { motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
+import { NavLink } from "react-router-dom";
 export default function Sidebar({
     isCollapsed,isMobile,isSidebarOpen,toggleSidebar
 }) {
@@ -21,7 +22,7 @@ export default function Sidebar({
             >
             {/* Logo + Close Button */}
             <div className="flex items-center justify-between border-b border-gray-700 p-4">
-                {!isCollapsed && <h1 className="text-lg font-semibold">Dashboard</h1>}
+                {!isCollapsed && <h1 className="text-lg font-semibold"><NavLink to='/admin'> Dashboard</NavLink></h1>}
                 {isMobile ? (
                 <button onClick={toggleSidebar}>
                     <X className="w-6 h-6 text-amber-500" />

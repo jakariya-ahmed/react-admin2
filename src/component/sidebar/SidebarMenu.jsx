@@ -111,7 +111,7 @@ export default function SidebarMenu({ isCollapsed }) {
                     </NavLink>
 
                     <NavLink
-                        to="/dashboard/product-list"
+                        to="/admin/products"
                         className={({ isActive }) => `flex items-center gap-x-2 w-full p-2 hover:indigo-900 ${isActive ? 'bg-indigo-900' : '' }`}
                     >
                         <span className="text-sm">All Products </span> <ShapesIcon className="w-3 h-3" /> 
