@@ -12,6 +12,9 @@ import 'tinymce/plugins/lists';
 import 'tinymce/plugins/code';
 import SingleImageUpload from "./SingleImageUpload";
 import GalleryUploader from "./GalleryUploader";
+import CategoryList from "./CategoryList";
+import BrandList from "./BrandList";
+import { PlusCircle } from "lucide-react";
 
 
 export default function ProductAddForm() {
@@ -42,6 +45,7 @@ const handleProductChange = (e) => {
 
 
 return (
+  <>
   <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-6 mt-4">
       
       {/* Left Section  */}
@@ -124,6 +128,10 @@ return (
               ></textarea>
             </div>
           </div>
+          <button className="flex items-center gap-2 bg-purple-500 text-white font-semibold rounded-md p-3 shadow-sm mt-6 cursor-pointer ">
+          Create Product <PlusCircle className="w-6" /> 
+        </button>
+
       </div>
       <div className="w-full lg:w-[20%] bg-white shadow-sm rounded-sm p-5 border-t-2 border-indigo-900">
           {/* Single Image upload  */}
@@ -132,8 +140,17 @@ return (
           {/* Gallery Images upload  */}
           <GalleryUploader />
           
+          {/* Category List  */}
+          <CategoryList /> 
+
+          {/* Brands list  */}
+          <BrandList /> 
       </div>
+
+      
   </div>
+      
+  </>
 );
 
 
