@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import React, { useState } from "react";
 
 export default function SingleImageUpload() {
@@ -13,13 +14,13 @@ export default function SingleImageUpload() {
   };
 
   return (
-    <div className="px-2">
+    <div className="px-2 border border-gray-200 mb-4 p-4">
       <label className="block font-medium mb-2 text-gray-700">
         Product Image <span className="text-indigo-900">*</span>
       </label>
 
       {/* Upload area */}
-      <div className="relative border-2 border-dashed border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center cursor-pointer hover:border-purple-900 transition-all duration-150">
+      <div className="relative group border-2 border-dashed border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center cursor-pointer hover:border-purple-900 transition-all duration-150">
         <input
           type="file"
           accept="image/*"
@@ -55,16 +56,18 @@ export default function SingleImageUpload() {
             <p className="text-xs text-gray-400">PNG, JPG, JPEG (max 5MB)</p>
           </div>
         )}
-      </div>
-
-      {preview && (
+        {preview && (
         <button
           onClick={() => setPreview(null)}
-          className="mt-3 text-sm text-red-600 hover:underline"
+          className="absolute -top-2 -right-0 mt-3 p-1 text-white bg-red-500 cursor-pointer shadow-sm rounded-full opacity-0 group-hover:opacity-100 transition duration-200"
         >
-          Remove image
+          <X className="w-4 h-4"/>
         </button>
       )}
+
+      </div>
+
+      
     </div>
   );
 }

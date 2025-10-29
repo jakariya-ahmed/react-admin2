@@ -11,7 +11,7 @@ import 'tinymce/plugins/link';
 import 'tinymce/plugins/lists';
 import 'tinymce/plugins/code';
 import SingleImageUpload from "./SingleImageUpload";
-import GalleryImages from "./GalleryImages";
+import GalleryUploader from "./GalleryUploader";
 
 
 export default function ProductAddForm() {
@@ -125,13 +125,13 @@ return (
             </div>
           </div>
       </div>
-      <div className="w-full lg:w-[20%] bg-white shadow-sm rounded-sm p-5">
+      <div className="w-full lg:w-[20%] bg-white shadow-sm rounded-sm p-5 border-t-2 border-indigo-900">
           {/* Single Image upload  */}
           <SingleImageUpload /> 
 
           {/* Gallery Images upload  */}
-          <GalleryImages /> 
-
+          <GalleryUploader />
+          
       </div>
   </div>
 );
