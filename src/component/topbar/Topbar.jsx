@@ -1,6 +1,11 @@
 import { Bell, Globe, Maximize, Menu, Search, Settings, ShoppingBag, User } from "lucide-react";
+import { useState } from "react";
+import SearchModal from "./SearchModal";
 
 export default function Topbar({ toggleSidebar }) {
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+
     return (
         <header className="flex items-center justify-between bg-white px-4 py-2">
             {/* Left: Collapse / Toggle Button  */}
@@ -12,7 +17,9 @@ export default function Topbar({ toggleSidebar }) {
             </div>
             {/* Right: Action Icons  */}
             <div className="flex items-center gap-4 text-gray-600">
-                <Search className="text-gray-400 cursor-pointer hover:text-amber-500 w-4"/>
+                <Search
+                onClick={() => setIsSearchOpen(true)}
+                className="text-gray-400 cursor-pointer hover:text-amber-500 w-4"/>
                 <Globe className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
 
                 <div className="relative cursor-pointer">
@@ -34,6 +41,7 @@ export default function Topbar({ toggleSidebar }) {
                 <User className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
             </div>
 
+        <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
         </header>
     );
 }

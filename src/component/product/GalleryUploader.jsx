@@ -44,15 +44,15 @@ export default function GalleryUploader() {
             <p className="text-sm font-medium text-indigo-900">
               Click to upload image
             </p>
-            <p className="text-xs text-gray-400">PNG, JPG, JPEG (max 5MB)</p>
+            <p className="text-xs text-gray-400"> PNG, JPG, JPEG (max 5MB) </p>
           </div>
-        <input
-          type="file"
-          accept="image/*"
-          multiple
-          onChange={handleGalleryChange}
-          className="hidden"
-        />
+          <input
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={handleGalleryChange}
+            className="hidden"
+          />
       </label>
 
       {/* Image Preview */}
