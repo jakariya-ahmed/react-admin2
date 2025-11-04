@@ -1,7 +1,10 @@
 import { Bell, Globe, Maximize, Menu, Search, Settings, ShoppingBag, User } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SearchModal from "./SearchModal";
 import Languages from "./Languages";
+import { products } from "../../data/dashboardData";
+import TopCartItems from "./TopCartItems";
+
 
 export default function Topbar({ toggleSidebar }) {
     // Search State 
@@ -10,7 +13,16 @@ export default function Topbar({ toggleSidebar }) {
     const langRef = useRef(null);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [currentLang, setCurrentLang] = useState('bn'); 
-    
+    // cart items
+    const [isCartOpen, setIsCartOpen] = useState(false);
+    const [cartItems, setCartItems] = useState(products);
+
+    const cartRef = useRef(null);
+    // Remove item from cart 
+    const handleRemove = (id) => {
+        setCartItems((prev) => prev.filter((item) => item.id !== id));
+        setIsCartOpen(true);
+    } 
     return (
         <header className="flex items-center justify-between bg-white px-4 py-2">
             {/* Left: Collapse / Toggle Button  */}
@@ -38,18 +50,26 @@ export default function Topbar({ toggleSidebar }) {
                         /> )}
                 </div>
 
-                <div className="relative cursor-pointer">
-                    <ShoppingBag className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
+                <div className="relative cursor-pointer" ref={cartRef} onClick={() => setIsCartOpen((prev) => !prev)}>
+                    <ShoppingBag className="text-gray-400 hover:text-amber-500 w-4" />
+                    {cartItems.length > 0 && (
                     <span className="absolute -top-1 -right-1 bg-cyan-500 text-white text-xs rounded-full px-1">
-                        3
+                        {cartItems.length}
                     </span>
+                    )}
+
+                    {isCartOpen && (
+                        <TopCartItems cartRef={cartRef} isCartOpen={isCartOpen} items={cartItems} handleRemove={handleRemove} setIsCartOpen={setIsCartOpen}/>
+                    )}
                 </div>
 
                 <div className="relative cursor-pointer">
                     <Bell className="text-white-400 cursor-pointer hover:text-amber-500 w-4" />
+                    
                     <span className="absolute -top-1 -right-1 bg-violet-500 text-white text-xs rounded-full px-1">
-                        10
+                        4
                     </span>
+                    
                 </div>
 
                 <Maximize className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
