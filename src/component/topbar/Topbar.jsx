@@ -1,5 +1,5 @@
 import { Bell, Globe, Maximize, Menu, Search, Settings, ShoppingBag, User } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import SearchModal from "./SearchModal";
 import Languages from "./Languages";
 
@@ -7,9 +7,9 @@ export default function Topbar({ toggleSidebar }) {
     // Search State 
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     // Language State 
+    const langRef = useRef(null);
     const [isLangOpen, setIsLangOpen] = useState(false);
-    const [currentLang, setCurrentLang] = useState('bn');
-
+    const [currentLang, setCurrentLang] = useState('bn'); 
     
     return (
         <header className="flex items-center justify-between bg-white px-4 py-2">
@@ -25,14 +25,17 @@ export default function Topbar({ toggleSidebar }) {
                 <Search
                 onClick={() => setIsSearchOpen(true)}
                 className="text-gray-400 cursor-pointer hover:text-amber-500 w-4"/>
-                <div className="relative">
+                <div className="relative" ref={langRef}>
                     <Globe 
                     onClick={() => setIsLangOpen((prev) => !prev)}
                     className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
-                    {isLangOpen && (<Languages 
-                    currentLang={currentLang}
-                    setCurrentLang={setCurrentLang} 
-                    setIsLangOpen={setIsLangOpen} /> )}
+                    {isLangOpen && (
+                        <Languages currentLang={currentLang} 
+                        setIsLangOpen={setIsLangOpen}
+                        setCurrentLang={setCurrentLang} 
+                        isLangOpen={isLangOpen}
+                        langRef={langRef}
+                        /> )}
                 </div>
 
                 <div className="relative cursor-pointer">
