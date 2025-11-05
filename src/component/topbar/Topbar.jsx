@@ -4,6 +4,7 @@ import SearchModal from "./SearchModal";
 import Languages from "./Languages";
 import { products } from "../../data/dashboardData";
 import TopCartItems from "./TopCartItems";
+import NotificationDropdown from "./Notification";
 
 
 export default function Topbar({ toggleSidebar }) {
@@ -21,7 +22,6 @@ export default function Topbar({ toggleSidebar }) {
     // Remove item from cart 
     const handleRemove = (id) => {
         setCartItems((prev) => prev.filter((item) => item.id !== id));
-        setIsCartOpen(true);
     } 
     return (
         <header className="flex items-center justify-between bg-white px-4 py-2">
@@ -63,14 +63,8 @@ export default function Topbar({ toggleSidebar }) {
                     )}
                 </div>
 
-                <div className="relative cursor-pointer">
-                    <Bell className="text-white-400 cursor-pointer hover:text-amber-500 w-4" />
-                    
-                    <span className="absolute -top-1 -right-1 bg-violet-500 text-white text-xs rounded-full px-1">
-                        4
-                    </span>
-                    
-                </div>
+                {/* Notification icon & dropdown  */}
+                <NotificationDropdown />
 
                 <Maximize className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
                 <Settings className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />

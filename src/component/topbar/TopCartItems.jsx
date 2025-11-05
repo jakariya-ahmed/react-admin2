@@ -32,7 +32,7 @@ export default function TopCartItems({ items, handleRemove, setIsCartOpen, cartR
                             <span className="text-sm">{item.name}</span>
                             <p className="text-xs text-violet-500 font-semibold">{item.cat}</p>
                         </div>
-                        <button onClick={() => handleRemove(item.id)}><X className="w-4 h-4"/> </button>
+                        <button onClick={() => handleRemove(item.id)}><X className="w-4 h-4 cursor-pointer"/> </button>
                     </div>
                     ))
                 )}
