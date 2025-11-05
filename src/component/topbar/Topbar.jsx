@@ -5,6 +5,7 @@ import Languages from "./Languages";
 import { products } from "../../data/dashboardData";
 import TopCartItems from "./TopCartItems";
 import NotificationDropdown from "./Notification";
+import FullScreenToggle from "./FullScreenToggle";
 
 
 export default function Topbar({ toggleSidebar }) {
@@ -34,21 +35,26 @@ export default function Topbar({ toggleSidebar }) {
             </div>
             {/* Right: Action Icons  */}
             <div className="flex items-center gap-4 text-gray-600">
-                <Search
-                onClick={() => setIsSearchOpen(true)}
-                className="text-gray-400 cursor-pointer hover:text-amber-500 w-4"/>
-                <div className="relative" ref={langRef}>
-                    <Globe 
-                    onClick={() => setIsLangOpen((prev) => !prev)}
-                    className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
-                    {isLangOpen && (
-                        <Languages currentLang={currentLang} 
-                        setIsLangOpen={setIsLangOpen}
-                        setCurrentLang={setCurrentLang} 
-                        isLangOpen={isLangOpen}
-                        langRef={langRef}
+                <button className="hidden sm:flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-200 transition">
+                    <Search
+                    onClick={() => setIsSearchOpen(true)}
+                    className="text-gray-400 cursor-pointer hover:text-amber-500 w-4"/>
+                </button>
+                
+                <button className="hidden sm:flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-200 transition">
+                    <div className="relative" ref={langRef}>
+                        <Globe 
+                        onClick={() => setIsLangOpen((prev) => !prev)}
+                        className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
+                        {isLangOpen && (
+                            <Languages currentLang={currentLang} 
+                            setIsLangOpen={setIsLangOpen}
+                            setCurrentLang={setCurrentLang} 
+                            isLangOpen={isLangOpen}
+                            langRef={langRef}
                         /> )}
-                </div>
+                    </div>
+                 </button>
 
                 <div className="relative cursor-pointer" ref={cartRef} onClick={() => setIsCartOpen((prev) => !prev)}>
                     <ShoppingBag className="text-gray-400 hover:text-amber-500 w-4" />
@@ -66,8 +72,12 @@ export default function Topbar({ toggleSidebar }) {
                 {/* Notification icon & dropdown  */}
                 <NotificationDropdown />
 
-                <Maximize className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
+                {/* Fullscreen Toggle  */}
+                <FullScreenToggle />
+                <button className="hidden sm:flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-200 transition">
+
                 <Settings className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
+                </button>
                 <User className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
             </div>
 
