@@ -71,6 +71,7 @@ src/
 ```
 
 ---
+<img width="1869" height="947" alt="ecom-dashboard" src="https://github.com/user-attachments/assets/8b022eee-9401-4b70-91e3-1f8dc824a0be" />
 
 ## ⚙️ Installation & Setup
 
