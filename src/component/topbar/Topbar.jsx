@@ -1,4 +1,4 @@
-import { Bell, Globe, Maximize, Menu, Search, Settings, ShoppingBag, User } from "lucide-react";
+import { Bell, ChevronDown, ChevronDownIcon, Globe, Maximize, Menu, Search, Settings, ShoppingBag, User } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import SearchModal from "./SearchModal";
 import Languages from "./Languages";
@@ -6,6 +6,7 @@ import { products } from "../../data/dashboardData";
 import TopCartItems from "./TopCartItems";
 import NotificationDropdown from "./Notification";
 import FullScreenToggle from "./FullScreenToggle";
+import ProfileDropdown from "./ProfileDropdown";
 
 
 export default function Topbar({ toggleSidebar }) {
@@ -74,11 +75,14 @@ export default function Topbar({ toggleSidebar }) {
 
                 {/* Fullscreen Toggle  */}
                 <FullScreenToggle />
+                
+                {/* // ProfileDropdown */}
+                <ProfileDropdown /> 
+                
                 <button className="hidden sm:flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-200 transition">
 
                 <Settings className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
                 </button>
-                <User className="text-gray-400 cursor-pointer hover:text-amber-500 w-4" />
             </div>
 
         <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
